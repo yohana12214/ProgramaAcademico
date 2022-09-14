@@ -153,4 +153,12 @@ public class ControllerProgramaAcademico {
         return new ResponseEntity<Persona>(p, HttpStatus.OK);
     }
 
+    /*------   NEW-----metodo emulado (sin persistencia) para actualizar persona parcial  "PATCH con parámetros"----------------------------*/
+    @PatchMapping(path="/Udea/MinTic/ActualizarPP",produces=MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String>actualizarPersonaParcial(){
+        String retorno="Actualizacion parcial de dominio  Persona";
+        System.out.println("ok, metodo patch");
+        return new ResponseEntity<String>(retorno,HttpStatus.OK);
+    }
+
 }
