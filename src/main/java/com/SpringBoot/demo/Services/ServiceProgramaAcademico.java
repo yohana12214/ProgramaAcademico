@@ -90,6 +90,7 @@ public class ServiceProgramaAcademico {
         }
 
         }
+        System.out.println("metodo buscar Persona service");
         return persona;
     }
     /*Explicación
@@ -110,13 +111,12 @@ public class ServiceProgramaAcademico {
         objPersona.setId(persona.getId());
         objPersona.setDoc(persona.getDoc());
 
-        System.out.println("creo la persona con c.c");
+        System.out.println(" creo la persona con CC");
 
         //los guarda en la lista
         listaP.add(objPersona);
         return Boolean.TRUE; //viene hace eso y devuelve un true,para que diga que procesó
     }
-
 
     public Boolean addPersonaTI(Persona persona, String doc){
 
@@ -134,6 +134,17 @@ public class ServiceProgramaAcademico {
         return Boolean.TRUE; //viene hace eso y devuelve un true,para que diga que procesó
     }
 
+    //******************METODO EMULADO (sin persistencia) PARA CREAR PERSONAS  "POST con parámetros"*******************************
 
+    public Boolean borrarPersona (Persona persona){
+        listaP.remove(persona);
+        System.out.println("metodo remover del service");
+        return Boolean.TRUE;
+
+        /*Explicación:
+        * metodo con la variable borrarPersona
+        * de la listaP remover esa persona y retorna un true
+        *  */
+    }
 
 }
