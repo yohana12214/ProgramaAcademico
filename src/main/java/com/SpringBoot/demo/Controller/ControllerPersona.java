@@ -13,7 +13,7 @@ import java.util.ArrayList;
 //@RestController se utiliza con frontend desacoplado, proyectos grandes
 @RestController//lanza lo que tengo a browser
 @RequestMapping(value = "/Persona") //Path primario o ruta primaria en todos los End Point de esta clase
-public class ControllerProgramaAcademico {
+public class ControllerPersona {
 
     //Para instanciar un atributo dentro de mi misma clase se hace con un constructor:
 
@@ -138,5 +138,6 @@ public class ControllerProgramaAcademico {
         }
             return new ResponseEntity<Persona>(persona ,HttpStatus.OK);
    }
+
 
 }
